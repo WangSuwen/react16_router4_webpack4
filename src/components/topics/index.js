@@ -16,13 +16,13 @@ export default class Home extends React.Component{
         <h2>一级--Topics1123</h2>
         <ul>
           <li>
-            <Link to={`${_match.url}/rendering`}>Rendering with React</Link>
+            <Link to={`${_match.url}/rendering`} replace>Rendering with React</Link>
           </li>
           <li>
-            <Link to={`${_match.url}/components`}>Components</Link>
+            <Link to={`${_match.url}/components`} replace>Components</Link>
           </li>
           <li>
-            <Link to={`${_match.url}/props-v-state`}>Props v. State</Link>
+            <Link to={`${_match.url}/props-v-state`} replace>Props v. State</Link>
           </li>
         </ul>
         <hr/>

@@ -1,14 +1,12 @@
 import React from 'react';
-import Loadable from 'react-loadable';
-import Loading from '@components/loading';
+import asyncRouteList from './asyncRouteList';
 
+/**
+ * 对所有 按需加载的组件做处理
+ */
 export default class AsyncLoad extends React.Component {
   render() {
-    console.log(this.props);
-    const _AsyncLoad = Loadable({
-      loader: () => import(`@components/about`),
-      loading: Loading,
-    });
-    return <_AsyncLoad />;
+    const _A = asyncRouteList[this.props.compPath]
+    return <_A {...this.props}/>;
   }
 }

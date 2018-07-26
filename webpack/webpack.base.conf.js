@@ -81,6 +81,7 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all',
+          maxSize: 102400, // 以 Byte 为单位
         },
         commons: {
           name: 'commons',

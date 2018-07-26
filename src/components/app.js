@@ -10,13 +10,13 @@ export default class App extends React.Component{
       <div>
         <ul>
           <li>
-            <Link to="/">Home1</Link>
+            <Link to="/" replace>Home1</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" replace>About</Link>
           </li>
           <li>
-            <Link to="/topics">Topics</Link>
+            <Link to="/topics" replace>Topics</Link>
           </li>
         </ul>
         <hr />
