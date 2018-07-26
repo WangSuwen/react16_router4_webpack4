@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "react-dev-config": "webpack-dev-server --config ./webpack/webpack.dev.js --progress"
+    "react-dev-config": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.conf.js --progress",
+    "react-prod-config": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.prod.conf.js --progress",
+    "build": "./node_modules/.bin/webpack --config ./webpack/webpack.prod.conf.js --progress"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-loadable": "^5.4.0",
     "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "webpack-dev-server": "^3.1.5"
   },
   "devDependencies": {
@@ -19,10 +24,14 @@
     "@babel/plugin-proposal-class-properties": "^7.0.0-beta.44",
     "@babel/preset-env": "^7.0.0-beta.46",
     "@babel/preset-react": "^7.0.0-beta.44",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "postcss-loader": "^2.1.4",
     "style-loader": "^0.20.3",
     "uglifyjs-webpack-plugin": "^1.2.7",

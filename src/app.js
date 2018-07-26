@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, hashHistory } from 'react-router'
+import RootRouter from '@routes';
 
 
 ReactDOM.render(
-  // <GetRouter/>,
-  <h1>123456</h1>,
+  <RootRouter />,
   document.getElementById('app')
 );
