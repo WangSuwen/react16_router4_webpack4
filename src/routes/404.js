@@ -2,13 +2,13 @@ import React from "react";
 import { Route } from 'react-router-dom';
 import AsyncLoad from './asyncLoad';
 
-export default class AboutRout extends React.Component {
+export default class NotFoundRoute extends React.Component {
   constructor() {
     super();
   }
   render() {
     return (
-      <Route path="/about" exact render={(props) => <AsyncLoad compPath="@components/about" {...props} />} />
+      <Route render={(props) => <AsyncLoad compPath="@components/404" {...props} />} />
     );
   }
 }

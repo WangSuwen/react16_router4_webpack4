@@ -1,30 +1,36 @@
-
 import React from "react";
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, Switch, HashRouter } from 'react-router-dom';
 import createHashHistory from 'history/createHashHistory'
 const hashHistory = createHashHistory()
 
-import App from '@components/app';
-import Home from '@components/home/index';
-import AboutRout from './about';
-import TopicsRout from './topics';
+import RootRoute from './root';
+import AboutRoute from './about';
+import TopicsRoute from './topics';
+import NotFoundRoute from './404';
+import NotFoundPage from '@components/404';
 
 
 
 export default class RootRouter extends React.Component {
-  constructor() {
-    super()
-  }
   render() {
     return (
         <Router history={hashHistory}>
-          <div>
-            <Route path="/" component={App}/>
-            <Route path="/" component={Home} exact/>
-            <AboutRout />
-            <TopicsRout />
-            {/* 404 页面 配置有问题 */}
-          </div>
+            <div>
+              <Switch>
+                <Route 
+                  path="/"
+                  render={(props) => 
+                    <div>
+                      <RootRoute {...props}/>
+                      <AboutRoute {...props} />
+                      <TopicsRoute {...props} />
+                    </div>
+                  }
+                />
+                {/* <NotFoundRoute /> */}
+                <Route component={NotFoundPage}/>
+              </Switch>
+            </div>
         </Router>
     );
   }

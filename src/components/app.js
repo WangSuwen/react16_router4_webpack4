@@ -18,6 +18,9 @@ export default class App extends React.Component{
           <li>
             <Link to="/topics" replace>Topics</Link>
           </li>
+          <li>
+            <Link to="/404" replace>404</Link>
+          </li>
         </ul>
         <hr />
       </div>
