@@ -19,6 +19,9 @@ export default class App extends React.Component{
             <Link to="/topics" replace>Topics</Link>
           </li>
           <li>
+            <Link to="/reduxSth" replace>Redux 相关</Link>
+          </li>
+          <li>
             <Link to="/404" replace>404</Link>
           </li>
         </ul>

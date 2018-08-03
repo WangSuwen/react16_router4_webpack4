@@ -6,6 +6,7 @@ const hashHistory = createHashHistory()
 import RootRoute from './root';
 import AboutRoute from './about';
 import TopicsRoute from './topics';
+import TodosRoute from './todos';
 import NotFoundRoute from './404';
 import NotFoundPage from '@components/404';
 
@@ -24,6 +25,7 @@ export default class RootRouter extends React.Component {
                       <RootRoute {...props}/>
                       <AboutRoute {...props} />
                       <TopicsRoute {...props} />
+                      <TodosRoute {...props}/>
                     </div>
                   }
                 />

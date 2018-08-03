@@ -1,0 +1,4 @@
+export default {
+  INPUT_CHANGE: 'INPUT_CHANGE',
+  INPUT_CLEAR: 'INPUT_CLEAR',
+}

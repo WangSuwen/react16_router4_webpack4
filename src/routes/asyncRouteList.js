@@ -8,6 +8,7 @@ export default {
     '@components/about' : Loadable({ loader: () => import('@components/about'), loading: Loading }),
     '@components/topics' : Loadable({ loader: () => import('@components/topics'), loading: Loading }),
     '@components/topics/topic' : Loadable({ loader: () => import('@components/topics/topic'), loading: Loading }),
+    '@containers/todos' : Loadable({ loader: () => import('@containers/todos'), loading: Loading }),
     '@components/404' : Loadable({ loader: () => import('@components/404'), loading: Loading }),
 };
 
