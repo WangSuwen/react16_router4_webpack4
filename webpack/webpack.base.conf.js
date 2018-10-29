@@ -57,7 +57,7 @@ module.exports = {
 	},
 
 	output: {
-		filename: '[name].[chunkhash].js',
+		filename: '[name].[chunkhash].js',// [chunkhash]：每次只会把修改过的文件进行重新构建；[hash]：会把所有文件都重新进行构建
     path: path.resolve(__dirname, 'dist'),
     // chunkFilename: '[name].[chunkhash:5].chunk.js',
   },
