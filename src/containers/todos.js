@@ -14,6 +14,10 @@ class TodoContainer extends React.Component{
     inputChange: PropTypes.func,
     defaultMsgFromContainer: PropTypes.string,
   };
+  componentDidMount () {
+    const childState = TodoList.hello();
+    console.log(childState);
+  }
   render(){
     const { todos, inputChange, clearMsg } = this.props;
     return (
